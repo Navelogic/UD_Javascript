@@ -1,2 +1,2 @@
-# Estudos_de_Controle_Javascript
+# Estudos de Controle Javascript
  Projeto para armazenar estudos gerais de Javascript
