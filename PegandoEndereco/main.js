@@ -1,4 +1,4 @@
-const url = "https://viacep.com.br/";
+const url = "https://viacep.com.br/ws/";
 
 function PesquisaCEP(valor){
   let cep = valor.replace(/\D/g, '');
@@ -12,7 +12,7 @@ function PesquisaCEP(valor){
       document.getElementById('ibge').value=("...");
 
       let script = document.createElement('script');
-      script.src = 'https://viacep.com.br/ws/'+ cep + '/json/?callback=retorno';
+      script.src = `${url}${cep}//json/?callback=retorno`;
       document.body.appendChild(script);      
   } else {
     LimpaForm();
@@ -35,10 +35,6 @@ function retorno(conteudo){
     alert("CEP NÃO ENCONTRADO");
   }
 }
-
-
-
-
 
 function LimpaForm(){
   document.getElementById('rua').value=("");
